@@ -161,4 +161,84 @@
 
 
 
-3.                      
+3.                      *{
+                              /*所有的外边距为0*/
+                              margin: 0px;
+                              /*所有的内边距为0*/
+                              padding: 0px;
+                              /*规定两个并排的带边框的框*/
+                              box-sizing: border-box;
+                          }
+                          body{
+                              /*背景铺满*/
+                              background: url("Example.jpg") no-repeat center;
+                              padding-top:25px;
+                          }
+                          .rg_layout{
+                              width:700px;
+                              height:500px;
+                              /*边框:上下左右边框宽度+solid定义实线+颜色*/
+                              border:8px solid #EEEEEE;
+                              background-color: white;
+                              /*外边距:自适应*/
+                              margin: auto;
+                          }
+                          .rg_left{
+                              /*左浮动*/
+                              float:left;
+                              margin-top:150px;
+                          }
+                          .rg_left>p:first-child{
+                              color:#FFD026;
+                              font-size:20px;
+                          }
+                          .rg_left>p:last-child{
+                              color: #A6A6A6;
+                              font-size:20px;
+                          }
+                          .rg_center{
+                              padding-top: 30px;
+                              float:left;
+                          }
+                          .td_left{
+                              width: 100px;
+                              /*右对齐*/
+                              text-align: right;
+                              height: 45px;
+                          }
+                          .td_right{
+                              padding-left: 50px;
+                          }
+                          #username,#password,#email,#phone,#birthday{
+                              width: 250px;
+                              height: 32px;
+                              border:1px solid #A6A6A6;
+                              /*设置边框圆角*/
+                              border-radius: 5px;
+                          }
+                          #sub{
+                              width: 100px;
+                              height: 40px;
+                              background-color: #FFD026;
+                              border:1px solid #FFD026;
+                              opacity:0.5;
+                          }
+                          #res{
+                              width: 100px;
+                              height: 40px;
+                              background-color: #FFD026;
+                              border:1px solid #FFD026;
+                              opacity:0.5;
+                              margin-left: 200px;
+                          }
+                          #login{
+                              font-size:15px;
+                              color: coral;
+                          }
+                          a{
+                              text-decoration: none;
+                          }
+
+
+
+4.                        
