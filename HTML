@@ -881,4 +881,154 @@
 
 
 
-18.                           
+18.                           <!DOCTYPE html>
+                              <html lang="en">
+                              <head>
+                                  <meta charset="UTF-8">
+                                  <title>用户管理页面</title>
+                                  <link rel="stylesheet" href="UM.css">
+                              </head>
+                              <body>
+                              <table id="all">
+                                  <!--表格第一行-->
+                                  <tr id="Title">
+                                      <td>用户管理页面</td>
+                                  </tr>
+                                  <!--表格第二行-->
+                                  <tr>
+                                      <td>
+                                          <!--用户数据筛选-->
+                                          <table id="Choose">
+                                              <!--筛选信息-->
+                                              <tr>
+                                                  <td>性别</td>
+                                                  <td>
+                                                      <select>
+                                                          <option>男</option>
+                                                          <option>女</option>
+                                                      </select>
+                                                  </td>
+
+                                                  <td>年级</td>
+                                                  <td>
+                                                      <select>
+                                                          <option>2018</option>
+                                                          <option>2019</option>
+                                                          <option>2020</option>
+                                                          <option>2021</option>
+                                                      </select>
+                                                  </td>
+
+                                                  <td>专业</td>
+                                                  <td>
+                                                      <select>
+                                                          <option>计算机科学与技术</option>
+                                                          <option>信息管理与信息系统</option>
+                                                          <option>信息安全</option>
+                                                          <option>大数据应用与分析</option>
+                                                      </select>
+                                                  </td>
+
+                                                  <td id="action"><input type="button" value="查询" class="FirstButton"></td>
+                                              </tr>
+                                          </table>
+                                      </td>
+                                  </tr>
+                                  <!--表格第三行-->
+                                  <tr>
+                                      <td>
+                                          <!--用户数据显示-->
+                                          <table id="Show"  border="1" cellspacing="0">
+                                              <!--属性行-->
+                                              <tr id="attribute">
+                                                  <td>姓名</td>
+                                                  <td>性别</td>
+                                                  <td>年级</td>
+                                                  <td>专业</td>
+                                                  <td>操作</td>
+                                              </tr>
+                                              <!--用户数据行-->
+                                              <!--第一行-->
+                                              <tr class="user">
+                                                  <td>小李</td>
+                                                  <td>男</td>
+                                                  <td>2020</td>
+                                                  <td>计算机科学与技术</td>
+                                                  <td>
+                                                      <a href="#"><input type="button" value="删除" class="button"></a>
+                                                      <a href="#"><input type="button" value="更新" class="button"></a>
+                                                  </td>
+                                              </tr>
+                                              <!--第二行-->
+                                              <tr class="user">
+                                                  <td>小王</td>
+                                                  <td>男</td>
+                                                  <td>2018</td>
+                                                  <td>信息安全</td>
+                                                  <td>
+                                                      <a href="#"><input type="button" value="删除" class="button"></a>
+                                                      <a href="#"><input type="button" value="更新" class="button"></a>
+                                                  </td>
+                                              </tr>
+                                              <!--第三行-->
+                                              <tr class="user">
+                                                  <td>小刘</td>
+                                                  <td>女</td>
+                                                  <td>2019</td>
+                                                  <td>信息管理与信息系统</td>
+                                                  <td>
+                                                      <a href="#"><input type="button" value="删除" class="button"></a>
+                                                      <a href="#"><input type="button" value="更新" class="button"></a>
+                                                  </td>
+                                              </tr>
+                                              <!--第四行-->
+                                              <tr class="user">
+                                                  <td>小江</td>
+                                                  <td>女</td>
+                                                  <td>2020</td>
+                                                  <td>大数据应用与分析</td>
+                                                  <td>
+                                                      <a href="#"><input type="button" value="删除" class="button"></a>
+                                                      <a href="#"><input type="button" value="更新" class="button"></a>
+                                                  </td>
+                                              </tr>
+                                          </table>
+                                      </td>
+                                  </tr>
+                                  <!--表格第四行-->
+                                  <tr>
+                                      <td>
+                                          <table id="Bottom">
+                                              <center>
+                                                  <td >每页显示
+                                                      <select>
+                                                          <option>1 </option>
+                                                          <option>2 </option>
+                                                          <option>3 </option>
+                                                          <option>4</option>
+                                                          <option>5</option>
+                                                          <option>6</option>
+                                                          <option>7 </option>
+                                                          <option>8</option>
+                                                          <option>9</option>
+                                                          <option>10</option>
+                                                      </select>
+                                                      条信息</td>
+                                              </center>
+                                              <td > </td>
+                                          </table>
+                                      </td>
+                                  </tr>
+                                  <!--表格第五行-->
+                                  <tr id="Add">
+                                      <td>
+                                          <a href="#"><input type="button" value="添加学生数据" class="LastButton"></a>
+                                      </td>
+                                  </tr>
+                              </table>
+                              </body>
+                              </html>
+
+
+
+19.                           
