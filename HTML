@@ -715,4 +715,170 @@
 
 
 
-17.
+17.                           <!DOCTYPE html>
+                              <html lang="en">
+                              <head>
+                                  <meta charset="UTF-8">
+                                  <title>注册界面</title>
+                                  <link rel="stylesheet" href="Register.css">
+                                  <script src="jquery-3.5.1.min.js"></script>
+                              </head>
+                              <body>
+                              <div class="rg_layout">
+                                  <!--定义注册界面左侧部分-->
+                                  <div class="rg_left">
+                                      <p>新用户注册</p>
+                                      <p>USER REGISTER</p>
+                                  </div>
+                                  <!--定义注册界面中间部分-->
+                                  <div class="rg_center">
+                                      <div class="rg_form">
+                                          <!--表单-->
+                                          <!--<form name="register" action="#" method="post" onsubmit="testForm()">-->
+                                          <form action="#" method="post">
+                                              <!--表格(用表格来让注册信息保持整齐)-->
+                                              <table>
+                                                  <!--第一行:用户名-->
+                                                  <tr>
+                                                      <!--表单的使用-->
+                                                      <td class="td_left"><label for="username">用户名</label></td>
+                                                      <td class="td_right"><input type="text" name="" id="username" placeholder="请输入2~4位中文字符"></td>
+                                                  </tr>
+                                                  <!--第二行:密码-->
+                                                  <tr>
+                                                      <td class="td_left"><label for="password">密码</label></td>
+                                                      <td class="td_right"><input type="password" name="password" id="password" placeholder="请输入10~18位数字字母混合密码"></td>
+                                                  </tr>
+                                                  <!--第三行:邮箱-->
+                                                  <tr>
+                                                      <td class="td_left"><label for="email">E-mail</label></td>
+                                                      <td class="td_right"><input type="text" name="email" id="email"></td>
+                                                  </tr>
+                                                  <!--第四行:手机号-->
+                                                  <tr>
+                                                      <td class="td_left"><label for="phone">手机号</label></td>
+                                                      <td class="td_right"><input type="text" name="phone" id="phone"></td>
+                                                  </tr>
+                                                  <!--第五行:性别-->
+                                                  <tr>
+                                                      <td class="td_left">性别</td>
+                                                      <td class="td_right">
+                                                          <input type="radio" name="gender" value="girl">女
+                                                          <input type="radio" name="gender" value="boy">男
+                                                      </td>
+                                                  </tr>
+                                                  <!--第六行:出生日期-->
+                                                  <tr>
+                                                      <td class="td_left"><label for="birthday">出生日期</label></td>
+                                                      <td class="td_right"><input type="date" name="birthday" id="birthday"></td>
+                                                  </tr>
+                                                  <!--第七行:注册键-->
+                                                  <tr>
+                                                      <!--colspan:表格跨列操作,值为所跨的列数;rowspan:表格跨行操作,值为所跨的行数-->
+                                                      <td><input type="submit" value="注册" id="sub"></td>
+                                                      <td><input type="reset" value="重置" id="res"></td>
+                                                  </tr>
+                                              </table>
+                                          </form>
+                                      </div>
+                                      <p>已有账号?<a href="Login.html" id="login">立即登录</a></p>
+                                  </div>
+                              </div>
+                              <!--
+                              <script>
+                                  function testForm(){
+                                      var name=document.forms["register"]["username"].value;
+                                      if(name==null||name==""){
+                                          alert("用户名不能为空!");
+                                          return false;
+                                      }
+                                      var password=document.forms["register"]["password"].value;
+                                      if(password==null||password==""){
+                                          alert("密码不能为空!");
+                                          return false;
+                                      }
+                                      var email=document.forms["register"]["email"].value;
+                                      if(email==null||email==""){
+                                          alert("E-mail不能为空!");
+                                          return false;
+                                      }
+                                      else if(!/^\w+@[a-z0-9]+(\.[a-z]+){1,3}$/.test(email)){
+                                          alert("E-mail格式不正确!");
+                                          return false;
+                                      }
+                                      var phone=document.forms["register"]["phone"].value;
+                                      if(phone==null||phone==""){
+                                          alert("手机号不能为空!");
+                                          return false;
+                                      }
+                                      else if((!/^1[3|4|5|8][0-9]\d{4,8}$/.test(phone))){
+                                          alert("手机号格式不正确!");
+                                          return false;
+                                      }
+                                      var gender=document.forms["register"]["gender"].value;
+                                      if(gender==""){
+                                          alert("请选择性别!");
+                                          return false;
+                                      }
+                                      var birthday=document.forms["register"]["birthday"].value;
+                                      if(birthday==""){
+                                          alert("请选择出生日期!");
+                                          return false;
+                                      }
+                                  }
+                              </script>
+                              -->
+                              <script>
+                                  $(document).ready(function (){
+                                      $("#sub").click(function (){
+                                          if($("#username").val()==null||$("#username").val()===""){
+                                              alert("用户名不能为空!");
+                                              return false;
+                                          }
+                                          else if(!/^[\u4e00-\u9fa5]{2,4}$/.test($("#username").val())){
+                                              /*用户名由2~4个中文字符构成*/
+                                              alert("用户名格式不正确!");
+                                              return false;
+                                          }
+                                          else if($("#password").val()==null||$("#password").val()===""){
+                                              alert("密码不能为空!");
+                                              return false;
+                                          }
+                                          else if(!/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{10,18}$/.test($("#password").val())){
+                                              /*由数字和字母组成，并且要同时含有数字和字母，且长度要在10-18位之间。*/
+                                              alert("密码格式不正确!");
+                                              return false;
+                                          }
+                                          else if($("#email").val()==null||$("#email").val()===""){
+                                              alert("E-mail不能为空!");
+                                              return false;
+                                          }
+                                          else if(!/^\w+@[a-z0-9]+(\.[a-z]+){1,3}$/.test($("#email").val())){
+                                              alert("E-mail格式不正确!");
+                                              return false;
+                                          }
+                                          else if($("#phone").val()==null||$("#phone").val()===""){
+                                              alert("手机号不能为空!");
+                                              return false;
+                                          }
+                                          else if(!/^[1]([3-9])[0-9]{9}$/.test($("#phone").val())){
+                                              alert("手机号格式不正确!");
+                                              return false;
+                                          }
+                                          else if($('input[name="gender"]').filter(':checked').val() == undefined){
+                                              alert("请选择性别!");
+                                              return false;
+                                          }
+                                          else if($("#birthday").val()==""){
+                                              alert("请选择出生日期!");
+                                              return false;
+                                          }
+                                      })
+                                  })
+                              </script>
+                              </body>
+                              </html>
+
+
+
+18.                           
